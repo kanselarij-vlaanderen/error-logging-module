@@ -1,7 +1,7 @@
 import * as moment from "moment";
 import { uuid } from 'uuidv4';
 
-class Monitoring {
+module.exports = class Monitoring {
   setServiceName(serviceName) {
     this.serviceName = serviceName;
   }
@@ -90,5 +90,3 @@ class Monitoring {
     return insertData;
   };
 }
-
-module.exports = Monitoring;
