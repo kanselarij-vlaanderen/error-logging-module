@@ -1,0 +1,23 @@
+{
+  "name": "error-logging-module",
+  "version": "1.0.0",
+  "description": "error logging module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanselarij-vlaanderen/error-logging-module.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kanselarij-vlaanderen/error-logging-module/issues"
+  },
+  "homepage": "https://github.com/kanselarij-vlaanderen/error-logging-module#readme",
+  "dependencies": {
+    "moment": "^2.24.0",
+    "uuidv4": "^6.0.5"
+  }
+}
