@@ -54,7 +54,7 @@ module.exports = class Monitoring {
 
     INSERT DATA {
         GRAPH <${graph}> {
-             <${newURI}> a ext:Success ;
+             <${newURI}> a ext:Log ;
                            mu:uuid "${newUUID}" ;
                            ext:type "${data.type}";
                            ext:serviceName "${data.serviceName}";
