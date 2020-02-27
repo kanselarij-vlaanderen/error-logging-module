@@ -18,7 +18,7 @@ module.exports = class Monitoring {
    return this.graph;
   }
 
-  createLog(data) {
+  createLogEntry(data) {
     const {state, type } = data;
     const successObject = {
       success: true,
@@ -31,7 +31,7 @@ module.exports = class Monitoring {
     return this.createLogQuery(successObject,this.getGraph())
   };
 
-  logError(data) {
+  createErrorEntry(data) {
     const {type, state, message, error } = data;
     const errorObject =  {
       success: false,
@@ -42,7 +42,7 @@ module.exports = class Monitoring {
       message,
       error
     };
-    return this.createLogQuery(errorObject,this.getGraph());
+    return this.createErrorQuery(errorObject,this.getGraph());
   };
 
   createLogQuery(data, graph) {
@@ -89,4 +89,4 @@ module.exports = class Monitoring {
   `;
     return insertData;
   };
-}
+};
