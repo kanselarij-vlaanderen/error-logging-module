@@ -57,10 +57,10 @@ module.exports = class Monitoring {
         GRAPH <${graph}> {
              <${newURI}> a ext:Success ;
                            mu:uuid "${newUUID}" ;
-                           ext:type ${data.type};
-                           ext:serviceName ${data.serviceName};
-                           ext:unixTimestamp ${data.unixTimestamp};
-                           ext:state ${data.state} .       
+                           ext:type "${data.type}";
+                           ext:serviceName "${data.serviceName}";
+                           ext:unixTimestamp "${data.unixTimestamp}";
+                           ext:state "${data.state}" .       
         }
     }
   `;
@@ -78,12 +78,12 @@ module.exports = class Monitoring {
     INSERT DATA {
       GRAPH <${graph}> {
         <${newURI} a ext:Error;
-                   mu:uuid ${newUUID};
-                   ext:type ${data.type};
-                   ext:serviceName ${data.serviceName};
-                   ext:unixTimestamp ${data.unixTimestamp};
-                   ext:state ${data.state} ;
-                   ext:error ${data.error} .
+                   mu:uuid "${newUUID}";
+                   ext:type "${data.type}";
+                   ext:serviceName "${data.serviceName}";
+                   ext:unixTimestamp "${data.unixTimestamp}";
+                   ext:state "${data.state}" ;
+                   ext:error "${data.error}" .
       }
     }
   `;
