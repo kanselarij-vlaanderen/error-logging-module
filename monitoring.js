@@ -1,5 +1,5 @@
-import * as moment from "moment";
-import { uuid } from 'uuidv4';
+var moment = require("moment");
+var uuid = require('uuidv4');
 
 module.exports = class Monitoring {
   setServiceName(serviceName) {
