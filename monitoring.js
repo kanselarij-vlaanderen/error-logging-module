@@ -18,7 +18,7 @@ module.exports = class Monitoring {
    return this.graph;
   }
 
-  logSuccess(data) {
+  createLog(data) {
     const {state, type } = data;
     const successObject = {
       success: true,
@@ -28,7 +28,7 @@ module.exports = class Monitoring {
       type
     };
 
-    return this.successQuery(successObject,this.getGraph())
+    return this.createLogQuery(successObject,this.getGraph())
   };
 
   logError(data) {
@@ -42,12 +42,12 @@ module.exports = class Monitoring {
       message,
       error
     };
-    return this.errorQuery(errorObject,this.getGraph());
+    return this.createLogQuery(errorObject,this.getGraph());
   };
 
-  successQuery(data, graph) {
+  createLogQuery(data, graph) {
     const newUUID = uuid();
-    const newURI = `http://mu.semte.ch/vocabularies/ext/success/${newUUID}`;
+    const newURI = `http://mu.semte.ch/vocabularies/ext/logs/${newUUID}`;
 
     let insertData = `
     PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
@@ -67,7 +67,7 @@ module.exports = class Monitoring {
     return insertData;
   };
 
-  errorQuery(data, graph) {
+  createErrorQuery(data, graph) {
     const newUUID = uuid();
     const newURI = `http://mu.semte.ch/vocabularies/ext/error/${newUUID}`;
 
