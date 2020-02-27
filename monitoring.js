@@ -48,7 +48,7 @@ module.exports = class Monitoring {
     const newUUID = uuid();
     const newURI = `http://mu.semte.ch/vocabularies/ext/logs/${newUUID}`;
 
-    let insertData = `
+    const insertData = `
     PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
     PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
 
@@ -70,7 +70,7 @@ module.exports = class Monitoring {
     const newUUID = uuid();
     const newURI = `http://mu.semte.ch/vocabularies/ext/error/${newUUID}`;
 
-    let insertData = `
+    const insertData = `
     PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
     PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
   
