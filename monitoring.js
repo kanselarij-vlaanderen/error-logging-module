@@ -1,4 +1,4 @@
-const { moment } = require("moment");
+const moment = require('moment');
 const { uuid } = require('uuidv4');
 
 module.exports = class Monitoring {
