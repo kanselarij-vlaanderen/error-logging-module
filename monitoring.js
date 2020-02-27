@@ -20,15 +20,14 @@ module.exports = class Monitoring {
 
   createLogEntry(data) {
     const {state, type } = data;
-    const successObject = {
-      success: true,
+    const log = {
       unixTimestamp: moment().unix(),
       state,
       serviceName: this.getServiceName(),
       type
     };
 
-    return this.createLogQuery(successObject,this.getGraph())
+    return this.createLogQuery(log,this.getGraph())
   };
 
   createErrorEntry(data) {
